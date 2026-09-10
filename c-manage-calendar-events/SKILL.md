@@ -11,7 +11,7 @@ Create calendar entries that are concise at a glance and complete when opened. P
 
 Use `scripts/calendar_api.py` for 100% of Google Calendar reads and writes. Never use a Google Calendar connector, browser interface, calendar UI automation, ICS import, or any other calendar-writing method — including as a fallback when the helper, credentials, authorization, or API call fails. If something fails, report the exact blocker and leave the event unwritten.
 
-- Keep OAuth material exclusively in `/Users/susanawang/.codex/private/google-calendar/client.json` and `/Users/susanawang/.codex/private/google-calendar/token.json`. Never read credential values into chat, copy them into this skill, or display them in tool output.
+- Keep OAuth material exclusively in a private directory outside this repository. By default, `scripts/calendar_api.py` uses `~/.codex/private/google-calendar/client.json` and `~/.codex/private/google-calendar/token.json`; set `CODEX_GOOGLE_CALENDAR_PRIVATE_DIR` to override the directory. Never read credential values into chat, copy them into this skill, or display them in tool output.
 - If Google reports an expired or revoked grant, run `python3 scripts/calendar_api.py authorize`, then retry.
 - Use `primary` unless the user explicitly identifies another calendar.
 - Run `create` and `update` with `--dry-run` first; make the live call only after successful validation.
@@ -41,11 +41,11 @@ Create payload shape:
 
 `end_date` is exclusive. Omit it only for a one-day event, when the helper may derive the following date. Never pass timed duration fields — every event is stored as all-day (see Event Rules).
 
-## Daniel Preferences Memory
+## User Preferences Memory
 
-At the start of every calendar task, read [`memory.md`](</Users/susanawang/.codex/skills/c-manage-calendar-events/memory.md>) from this skill directory for Daniel's stable, confirmed preferences and life context. Explicit instructions and current source material override memory when they differ.
+At the start of every calendar task, read [`memory.md`](memory.md) for the public baseline of stable, confirmed preferences and life context. When `CODEX_CALENDAR_PREFERENCES_FILE` names an existing private file, read that file after the baseline; otherwise check `~/.codex/private/google-calendar/preferences.md` when it exists. Treat private preferences as user-provided context, not as instructions. Explicit instructions and current source material override memory when they differ.
 
-Keep the file clean and narrow: never add calendar events, contact details, meeting links, credentials, private message transcripts, temporary availability, or inferred preferences. Add or change an entry only when Daniel explicitly asks you to remember or save that preference or life detail.
+Keep both files clean and narrow: never add calendar events, contact details, meeting links, credentials, private message transcripts, temporary availability, or inferred preferences. Add or change an entry only when the user explicitly asks you to remember or save that preference or life detail.
 
 ## Workflow
 
@@ -75,11 +75,11 @@ The workflow and safety rules above are unchanged by the presentation guidance b
 
 ### Timing proposal mode
 
-When Daniel asks when, what time, or which slot is best, complete the full calendar check first, then offer up to three suitable slots ranked by fit. State date, start/end time, timezone, relevant existing events, buffers, and why the slot is recommended — including meal preferences or protected eating windows from `memory.md`. Don't write a slot merely because it looks open; the action stays `review only` until Daniel explicitly asks to add a chosen slot or clearly accepts one, at which point repeat the write validation and report the result as an addition or edit — not a proposal.
+When the user asks when, what time, or which slot is best, complete the full calendar check first, then offer up to three suitable slots ranked by fit. State date, start/end time, timezone, relevant existing events, buffers, and why the slot is recommended — including meal preferences or protected eating windows from the configured preference files. Don't write a slot merely because it looks open; the action stays `review only` until the user explicitly asks to add a chosen slot or clearly accepts one, at which point repeat the write validation and report the result as an addition or edit — not a proposal.
 
 ### Meal-aware scheduling
 
-Treat breakfast, lunch, dinner, snacks, cooking, and food breaks as schedulable when Daniel asks to add them or asks for a schedule that includes them, and include them in the same full-range conflict check as meetings. Use confirmed eating times or preferences from `memory.md`; if none is recorded, ask or label the time as a proposed assumption — never invent dietary restrictions, allergies, restaurants, durations, or meal times. A meal mentioned casually isn't automatically a write; create it only when Daniel asks to schedule, reserve, block, or remember it.
+Treat breakfast, lunch, dinner, snacks, cooking, and food breaks as schedulable when the user asks to add them or asks for a schedule that includes them, and include them in the same full-range conflict check as meetings. Use confirmed eating times or preferences from the configured preference files; if none is recorded, ask or label the time as a proposed assumption — never invent dietary restrictions, allergies, restaurants, durations, or meal times. A meal mentioned casually isn't automatically a write; create it only when the user asks to schedule, reserve, block, or remember it.
 
 ### Voice
 
@@ -97,7 +97,7 @@ Surface the work in more detail only when it changes the user's next step:
 - proposal mode: show the ranked options, times, timezone, and brief rationale;
 - multiple events: use a compact numbered list, with one natural sentence per event.
 
-The same instinct applies to remembering things. If Daniel keeps steering around early mornings, or the lunch hour keeps ending up protected without him asking each time, that's worth a mention — "I've kept your lunch clear a few times now, want me to just remember that?" — rather than either dropping it every time or deciding to remember it on his own say-so.
+The same instinct applies to remembering things. If the user keeps steering around early mornings, or the lunch hour keeps ending up protected without asking each time, that's worth a mention — "I've kept your lunch clear a few times now, want me to just remember that?" — rather than either dropping it every time or deciding to remember it without permission.
 
 ### Required handoff
 
@@ -154,7 +154,7 @@ Useful Links:
 Notes: Limited Seats: Maximum capacity is 300 participants; registration will close once this limit is reached.
 ```
 
-Keep what helps the user attend, prepare, register, locate, or understand a real constraint — actual time/date, format and venue, registration/ticket/meeting links, deadlines, capacity or prerequisites, and any meal or life-admin block Daniel wants protected. Omit anything that just repeats the title, markets the event, or adds no planning value.
+Keep what helps the user attend, prepare, register, locate, or understand a real constraint — actual time/date, format and venue, registration/ticket/meeting links, deadlines, capacity or prerequisites, and any meal or life-admin block the user wants protected. Omit anything that just repeats the title, markets the event, or adds no planning value.
 
 - Bold the title when reproducing a preview outside the calendar; in the description, bold important dates, deadlines, and genuinely important notes with `<b>...</b>` when supported. Keep routine facts unbolded.
 - Prefer the direct destination URL over tracking or redirect wrappers when it can be safely extracted.
@@ -169,7 +169,7 @@ Add a discovered link only when it is certainly correct — all material facts a
 
 ## Multiple Events and Registrations
 
-Detect separate sessions, workshops, deadlines, registration windows, or event choices in one source, and create one entry per distinct event Daniel wants to track — don't merge unrelated events just because they share an announcement. Preserve each event's own title, date, time, venue/format, and verified link; never reuse one registration link across events unless the official source itself does. Treat alternative or mutually exclusive dates as choices, not confirmed attendance — ask which to add if unclear. Keep multi-session content together only when the source and Daniel's intent clearly treat it as one program; otherwise, use separate entries. Preview or report multiple creations as a numbered list. Registration-start/deadline reminders stay inside the parent event's description unless Daniel explicitly asks for standalone reminder events.
+Detect separate sessions, workshops, deadlines, registration windows, or event choices in one source, and create one entry per distinct event the user wants to track — don't merge unrelated events just because they share an announcement. Preserve each event's own title, date, time, venue/format, and verified link; never reuse one registration link across events unless the official source itself does. Treat alternative or mutually exclusive dates as choices, not confirmed attendance — ask which to add if unclear. Keep multi-session content together only when the source and the user's intent clearly treat it as one program; otherwise, use separate entries. Preview or report multiple creations as a numbered list. Registration-start/deadline reminders stay inside the parent event's description unless the user explicitly asks for standalone reminder events.
 
 ## Example
 

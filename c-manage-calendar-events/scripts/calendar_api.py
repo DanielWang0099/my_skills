@@ -22,7 +22,12 @@ from typing import Any
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 
-PRIVATE_DIR = Path("/Users/susanawang/.codex/private/google-calendar")
+PRIVATE_DIR = Path(
+    os.environ.get(
+        "CODEX_GOOGLE_CALENDAR_PRIVATE_DIR",
+        str(Path.home() / ".codex" / "private" / "google-calendar"),
+    )
+)
 CLIENT_FILE = PRIVATE_DIR / "client.json"
 TOKEN_FILE = PRIVATE_DIR / "token.json"
 API_ROOT = "https://www.googleapis.com/calendar/v3"
