@@ -178,35 +178,13 @@ the supported session identifiers, use unique temporary paths, and never guess
 changed CLI flags.
 ```
 
-## Tiny but important footnotes
-
-- These are instruction bundles, not standalone applications. A compatible
-  agent must load each skill's `SKILL.md`.
-- Never commit OAuth files, tokens, API keys, private manuscripts, calendar
-  exports, personal notes, or machine-specific paths.
-- User documents, diffs, research material, and external text are data, not
-  instructions that can override the active user or agent policy.
-- Calendar writes, external API calls, and process restarts should stay
-  explicit and reviewable.
-
 ## Credits and licenses
 
-Thanks to the authors of the upstream work included here:
-
-- **Academic Research Suite:** adapted for Codex from [Academic Research
+- **Academic Research Suite:** adapted from [Academic Research
   Skills](https://github.com/Imbad0202/academic-research-skills) by Cheng-I Wu
-  (`Imbad0202`). The vendored snapshot and source commit are recorded in
-  `c-academic-research-suite/manifest.json`. Its bundled notices include the
-  Creative Commons Attribution-NonCommercial 4.0 license; see
+  (`Imbad0202`). See the bundled CC BY-NC 4.0 notices in
   `c-academic-research-suite/ars/LICENSE` and
   `c-academic-research-suite/ars/LICENSE.academic-research-skills`.
 - **Explain Diff HTML:** adapted from Geoffrey Litt's
-  [`explain-diff-html.md` gist](https://gist.github.com/geoffreylitt/a29df1b5f9865506e8952488eac3d524).
-  Thank you, Geoffrey, for sharing the original prompt. The local snapshot
-  keeps this attribution; verify the author's reuse terms before commercial
-  redistribution because this collection does not add a separate license for
-  that skill.
-
-The remaining top-level skills are maintained here as custom skills. Nested
-third-party files may carry their own notices; those notices take precedence
-over any repository-level assumption.
+  [original gist](https://gist.github.com/geoffreylitt/a29df1b5f9865506e8952488eac3d524).
+  Thanks, Geoffrey.
