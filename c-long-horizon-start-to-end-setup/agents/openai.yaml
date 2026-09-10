@@ -1,0 +1,4 @@
+interface:
+  display_name: "C Long Horizon Setup"
+  short_description: "Content-first recursive task tracking"
+  default_prompt: "Use $c-long-horizon-start-to-end-setup to create a content-first recursive Markdown planning and tracking folder for this long-running task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "C Manage Calendar Events"
+  short_description: "Create polished, low-clutter calendar events"
+  default_prompt: "Use $c-manage-calendar-events to add this information to my calendar as a polished event."
