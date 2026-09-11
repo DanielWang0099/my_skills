@@ -11,9 +11,6 @@ A small collection of personal skills.
 | <img src="https://img.shields.io/badge/Setup%20needed-f59e0b?style=for-the-badge" alt="Setup needed"> | `c-manage-calendar-events` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Setup is a bit painful. Many native plugins already offer similar fucntionalities so idk why i recreated one. Not bad; still useful. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Not bad, but the trigger conditions need refinement. An unsupervised-restart skill should not ask for confirmation before using itself; it still needs more testing as a newer skill. |
 
-Ratings are personal experience, not an objective benchmark. N/A means there
-is not enough usage data to rate the skill yet.
-
 ## Table of contents
 
 - [c-diagnostic-teaching — Ready to use](#c-diagnostic-teaching)
