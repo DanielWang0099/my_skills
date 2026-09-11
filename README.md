@@ -1,8 +1,6 @@
 # Custom Agent Skills
 
-A small simple repo of personal skills. The ratings are absolute, trustworthy
-(as the trust-me-bro benchmarks for LLMs), and they are not subjected to any
-bias :D
+A small collection of personal skills.
 
 | Status | Skill | Personal rating | Opinion |
 | --- | --- | --- | --- |
@@ -25,10 +23,10 @@ is not enough usage data to rate the skill yet.
 - [c-manage-calendar-events — Setup needed](#c-manage-calendar-events)
 - [c-self-restart — Ready to use](#c-self-restart)
 
-## If you love my skills, install all 9
+## Install all available skills
 
-There are six top-level skills in this repository right now. The other three
-are too shy. This prompt installs every skill that actually exists:
+There are currently six top-level skills in this repository. This prompt
+installs every skill that exists:
 
 ```text
 Please install every top-level skill from
