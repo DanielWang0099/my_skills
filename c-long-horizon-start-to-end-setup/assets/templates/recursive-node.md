@@ -9,7 +9,7 @@ Progress cursor: `MASTER_PROGRESS.md`
 
 ## Objective And Success
 
-[What this node must accomplish and what observable result makes it successful. State the result this node should optimize for.]
+[What this node must accomplish and what observable result makes it successful. State the result this node should optimize for. It should minimally include what is exactly recorded at Task Model's Approved Two-Step Definition section and include more details. This is the most important part of the node as it defines its purpose and make the agent complete good work when surrounded by instructions and text that makes it over focus on execution policy. THIS IS A MUST]
 
 ## Scope
 
@@ -83,7 +83,7 @@ Evidence: [Short local evidence note, result link, source, test, count, or recon
 
 ## Completion Rule
 
-[Conditions for this node to be complete. If this node has children, state the terminal child states required before closure.]
+[Conditions for this node to be complete. If this node has children, state the terminal child states required before closure. Make sure that this is task focused while also policy focused.]
 
 ## Handoff Rule
 
