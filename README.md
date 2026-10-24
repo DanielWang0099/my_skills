@@ -10,6 +10,7 @@ A small collection of personal skills.
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-academic-research-suite` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
 | <img src="https://img.shields.io/badge/Setup%20needed-f59e0b?style=for-the-badge" alt="Setup needed"> | `c-manage-calendar-events` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Setup is a bit painful. Many native plugins already offer similar fucntionalities so idk why i recreated one. Not bad; still useful. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Not bad, but the trigger conditions need refinement. An unsupervised-restart skill should not ask for confirmation before using itself; it still needs more testing as a newer skill. |
+| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-ui-fundamentals` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | New; not evaluated yet. |
 
 ## Table of contents
 
@@ -19,10 +20,11 @@ A small collection of personal skills.
 - [c-academic-research-suite — Ready to use](#c-academic-research-suite)
 - [c-manage-calendar-events — Setup needed](#c-manage-calendar-events)
 - [c-self-restart — Ready to use](#c-self-restart)
+- [c-ui-fundamentals — Ready to use](#c-ui-fundamentals)
 
 ## Install all available skills
 
-There are currently six top-level skills in this repository. This prompt
+There are currently seven top-level skills in this repository. This prompt
 installs every skill that exists:
 
 ```text
@@ -30,10 +32,11 @@ Please install every top-level skill from
 https://github.com/DanielWang0099/my_skills into the agent's supported skills
 directory. Clone that repository and discover each of these skill directories:
 c-academic-research-suite, c-diagnostic-teaching, c-explain-diff-html,
-c-long-horizon-start-to-end-setup, c-manage-calendar-events, and c-self-restart.
+c-long-horizon-start-to-end-setup, c-manage-calendar-events, c-self-restart,
+and c-ui-fundamentals.
 Preserve each directory's complete folder structure and supporting files.
 
-Make all six currently available skills discoverable. Do not copy OAuth files,
+Make all seven currently available skills discoverable. Do not copy OAuth files,
 tokens, API keys, personal preference files, private notes, or machine-specific
 paths into the installed skill directories. Keep optional external services,
 cross-model APIs, full-runtime adapters, and process-restart behavior disabled
@@ -171,6 +174,24 @@ confirmation after that explicit request; instead, verify the current host's
 agent-list and resume commands before execution. Detect the active runtime from
 the supported session identifiers, use unique temporary paths, and never guess
 changed CLI flags.
+```
+
+## c-ui-fundamentals
+
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
+
+A style-neutral quality baseline for Codex UI work. It covers consistency,
+responsive layouts, interaction states, accessibility, forms, and data displays,
+with an optional layout audit script. No additional configuration is required.
+
+**LLM installation prompt**
+
+```text
+Install the c-ui-fundamentals skill from
+https://github.com/DanielWang0099/my_skills/tree/main/c-ui-fundamentals.
+Preserve the complete skill directory, including its references, assets, and
+layout audit script. Use it as a style-neutral quality baseline whenever
+building or editing a user interface. No additional configuration is required.
 ```
 
 ## Credits and licenses

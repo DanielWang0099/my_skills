@@ -1,0 +1,84 @@
+/*
+  base.css - structural fixes only.
+
+  Deliberately contains no colors, typefaces, font sizes, radii, shadows, or
+  spacing values, so it imposes no visual style. Pair it with your own tokens.
+  Selectors wrapped in :where() have zero specificity and are trivially overridden.
+
+  Optional, set per project to match the themes you actually support:
+    html { color-scheme: light; }        or    light dark
+*/
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5; /* override with your type-scale token */
+}
+
+/* Media never overflows its container */
+img, picture, video, canvas, svg { max-width: 100%; }
+img, picture, video, canvas { display: block; }
+img, video { height: auto; }
+
+/* Form controls do not inherit typography by default */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+textarea { resize: vertical; }
+
+/* Honest cursors */
+:where(button, [role="button"], summary) { cursor: pointer; }
+:where(:disabled, [aria-disabled="true"]) { cursor: not-allowed; }
+
+/* Visible keyboard focus. Set --focus-ring to a color with 3:1 contrast
+   against every background the ring can appear on. */
+:where(:focus-visible) {
+  outline: 2px solid var(--focus-ring, currentColor);
+  outline-offset: 2px;
+}
+
+/* Text wrapping that avoids orphans and overflow */
+:where(h1, h2, h3, h4, h5, h6) { text-wrap: balance; overflow-wrap: break-word; }
+:where(p, li, figcaption, blockquote) { text-wrap: pretty; overflow-wrap: break-word; }
+
+:where([hidden]) { display: none !important; }
+
+:where(table) { border-collapse: collapse; }
+
+/* Helpers */
+:where(.tabular) { font-variant-numeric: tabular-nums; }
+:where(.truncate) {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+:where(.visually-hidden) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
