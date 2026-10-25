@@ -4,7 +4,7 @@ A small collection of personal skills.
 
 | Status | Skill | Personal rating | Opinion |
 | --- | --- | --- | --- |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-diagnostic-teaching` | <span role="img" title="0 out of 5 stars" aria-label="0 out of 5 stars">✩✩✩✩✩</span> | Not used much; when used, it was not helpful. Needs refinement. |
+| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-misunderstandings-correction` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | New replacement; not evaluated yet. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-explain-diff-html` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-long-horizon-start-to-end-setup` | <span role="img" title="4 out of 5 stars" aria-label="4 out of 5 stars">⭐⭐⭐⭐✩</span> | Works really well on Codex for overnight runs; the parallel-agent workflow may need refinement. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-academic-research-suite` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
@@ -14,7 +14,7 @@ A small collection of personal skills.
 
 ## Table of contents
 
-- [c-diagnostic-teaching — Ready to use](#c-diagnostic-teaching)
+- [c-misunderstandings-correction — Ready to use](#c-misunderstandings-correction)
 - [c-explain-diff-html — Ready to use](#c-explain-diff-html)
 - [c-long-horizon-start-to-end-setup — Ready to use](#c-long-horizon-start-to-end-setup)
 - [c-academic-research-suite — Ready to use](#c-academic-research-suite)
@@ -31,7 +31,7 @@ installs every skill that exists:
 Please install every top-level skill from
 https://github.com/DanielWang0099/my_skills into the agent's supported skills
 directory. Clone that repository and discover each of these skill directories:
-c-academic-research-suite, c-diagnostic-teaching, c-explain-diff-html,
+c-academic-research-suite, c-misunderstandings-correction, c-explain-diff-html,
 c-long-horizon-start-to-end-setup, c-manage-calendar-events, c-self-restart,
 and c-ui-fundamentals.
 Preserve each directory's complete folder structure and supporting files.
@@ -45,23 +45,23 @@ to use and which need setup, including any missing files, dependencies, keys, or
 paths.
 ```
 
-## c-diagnostic-teaching
+## c-misunderstandings-correction
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span role="img" title="0 out of 5 stars" aria-label="0 out of 5 stars">✩✩✩✩✩</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
 
-Activates when there is evidence that a technical explanation has not been
-understood. It identifies the specific misunderstanding, adapts the
-explanation and pacing, and verifies understanding with targeted checks.
+Spots incorrect mental models in a user’s questions, predictions, explanations,
+and code, then names and corrects the likely mistaken rule in proportion to the
+evidence.
 
 **LLM installation prompt**
 
 ```text
-Install the c-diagnostic-teaching skill from
-https://github.com/DanielWang0099/my_skills/tree/main/c-diagnostic-teaching.
+Install the c-misunderstandings-correction skill from
+https://github.com/DanielWang0099/my_skills/tree/main/c-misunderstandings-correction.
 Clone or fetch the repository if needed, then copy that complete skill
 directory into the agent's supported skills directory, preserve SKILL.md, and
-make it available for technical explanations that need diagnosis after a
-misunderstanding. No additional configuration is required.
+make it available when a user's words, predictions, explanations, or code
+suggest an incorrect mental model. No additional configuration is required.
 ```
 
 ## c-explain-diff-html
