@@ -9,7 +9,7 @@ A small collection of personal skills.
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-long-horizon-start-to-end-setup` | <span role="img" title="4 out of 5 stars" aria-label="4 out of 5 stars">⭐⭐⭐⭐✩</span> | Works really well on Codex for overnight runs; the parallel-agent workflow may need refinement. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-academic-research-suite` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
 | <img src="https://img.shields.io/badge/Setup%20needed-f59e0b?style=for-the-badge" alt="Setup needed"> | `c-manage-calendar-events` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Setup is a bit painful. Many native plugins already offer similar fucntionalities so idk why i recreated one. Not bad; still useful. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Not bad, but the trigger conditions need refinement. An unsupervised-restart skill should not ask for confirmation before using itself; it still needs more testing as a newer skill. |
+| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Updated with restart-necessity checks and a one-restart guard; this version has not been reevaluated. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-ui-fundamentals` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | New; not evaluated yet. |
 
 ## Table of contents
@@ -158,22 +158,19 @@ live calendar write during installation.
 
 <p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span></p>
 
-A guarded workflow for restarting an agent process and resuming the same
-session. It requires a compatible host runtime, a resumable session, and
-verified runtime-specific agent-list and resume commands. Its trigger
-conditions and confirmation behavior require further testing.
+A guarded workflow for restarting an agent process when remaining work needs
+a fresh host, then resuming the same session. It verifies restart necessity,
+applies an auto-restart gate and loop guard, and checks runtime-specific commands.
 
 **LLM installation prompt**
 
 ```text
 Install the c-self-restart skill from
 https://github.com/DanielWang0099/my_skills/tree/main/c-self-restart and
-preserve its guarded restart-and-resume workflow. Use it only when the user
-explicitly requests a restart and continuation. Do not add a redundant
-confirmation after that explicit request; instead, verify the current host's
-agent-list and resume commands before execution. Detect the active runtime from
-the supported session identifiers, use unique temporary paths, and never guess
-changed CLI flags.
+preserve its guarded restart-and-resume workflow. Use it when remaining work
+needs a verified fresh host process or the user explicitly requests restart and
+continuation. Apply the auto-restart gate and one-restart guard, verify the
+current host's agent-list and resume commands, and never guess changed CLI flags.
 ```
 
 ## c-ui-fundamentals
