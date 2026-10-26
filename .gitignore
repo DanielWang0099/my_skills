@@ -5,3 +5,5 @@ __pycache__/
 .mypy_cache/
 .venv/
 venv/
+/AGENTS.md
+/schedule-assistant/preferences.md

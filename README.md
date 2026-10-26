@@ -1,16 +1,16 @@
 # Custom Agent Skills
 
-A small collection of personal skills.
+A small collection of custom agent skills.
 
-| Status | Skill | Personal rating | Opinion |
-| --- | --- | --- | --- |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-misunderstandings-correction` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | New replacement; not evaluated yet. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-explain-diff-html` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-long-horizon-start-to-end-setup` | <span role="img" title="4 out of 5 stars" aria-label="4 out of 5 stars">⭐⭐⭐⭐✩</span> | Works really well on Codex for overnight runs; the parallel-agent workflow may need refinement. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-academic-research-suite` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `schedule-assistant` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Uses the Google Calendar plugin; new replacement, not evaluated yet. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Verifies a restart is necessary and limits each workflow to one restart. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-ui-fundamentals` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | New; not evaluated yet. |
+| Status | Skill |
+| --- | --- |
+| Ready to use | `c-misunderstandings-correction` |
+| Ready to use | `c-explain-diff-html` |
+| Ready to use | `c-long-horizon-start-to-end-setup` |
+| Ready to use | `c-academic-research-suite` |
+| Ready to use | `schedule-assistant` |
+| Ready to use | `c-self-restart` |
+| Ready to use | `c-ui-fundamentals` |
 
 ## Table of contents
 
@@ -37,18 +37,17 @@ and c-ui-fundamentals.
 Preserve each directory's complete folder structure and supporting files.
 
 Make all seven currently available skills discoverable. Do not copy OAuth files,
-tokens, API keys, untracked personal preference files, private notes, or
-machine-specific paths into installed skill directories. Preserve tracked
-templates such as `schedule-assistant/preferences.md`. Keep optional external
-services, cross-model APIs, full-runtime adapters, and process-restart behavior
-disabled unless the user explicitly asks to configure them. Report which skills
-are ready to use and which need setup, including any missing files, dependencies,
-keys, or paths.
+tokens, API keys, personal preference files, private notes, or machine-specific
+paths into installed skill directories. Keep optional external services,
+cross-model APIs, full-runtime adapters, and process-restart behavior disabled
+unless the user explicitly asks to configure them. Report which skills are ready
+to use and which need setup, including any missing files, dependencies, keys, or
+paths.
 ```
 
 ## c-misunderstandings-correction
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 Spots incorrect mental models in a user’s questions, predictions, explanations,
 and code, then names and corrects the likely mistaken rule in proportion to the
@@ -67,7 +66,7 @@ suggest an incorrect mental model. No additional configuration is required.
 
 ## c-explain-diff-html
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 Produces a self-contained HTML explanation of a code diff with system
 background, conceptual intuition, diagrams, a code walkthrough, and a
@@ -87,7 +86,7 @@ additional configuration is required.
 
 ## c-long-horizon-start-to-end-setup
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span role="img" title="4 out of 5 stars" aria-label="4 out of 5 stars">⭐⭐⭐⭐✩</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 Creates a durable Markdown planning structure for work that should not depend
 on conversation memory alone. It manages project context, recursive task
@@ -108,7 +107,7 @@ evidence. No additional configuration is required.
 
 ## c-academic-research-suite
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 A Codex adapter for a research workflow suite covering deep research, literature
 reviews, academic writing, peer review, research-to-paper pipelines, experiment
@@ -127,12 +126,12 @@ optional external services or the full-runtime adapter during installation.
 
 ## schedule-assistant
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 A scheduling assistant that checks the connected Google Calendar before writes,
-surfaces conflicts, and applies the supplied `preferences.md` for event formatting
-and communication. It uses the Google Calendar plugin rather than a custom OAuth
-helper.
+surfaces conflicts, and applies an optional local `preferences.md` for event
+formatting and communication. It uses the Google Calendar plugin rather than a
+custom OAuth helper.
 
 - **Runtime:** Connected Google Calendar plugin.
 
@@ -141,13 +140,14 @@ helper.
 ```text
 Install the complete schedule-assistant skill directory from
 https://github.com/DanielWang0099/my_skills/tree/main/schedule-assistant,
-preserving both SKILL.md and preferences.md. Use the connected Google Calendar
+preserving SKILL.md. Do not copy personal `preferences.md` files; use the skill's
+defaults when no local preferences file exists. Use the connected Google Calendar
 plugin for calendar reads and writes; no custom OAuth setup is required.
 ```
 
 ## c-self-restart
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 A guarded workflow for restarting an agent process when remaining work needs
 a fresh host, then resuming the same session. It verifies restart necessity,
@@ -166,7 +166,7 @@ current host's agent-list and resume commands, and never guess changed CLI flags
 
 ## c-ui-fundamentals
 
-<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use">&nbsp;&nbsp;<span title="Not rated yet" aria-label="Not rated yet">N/A</span></p>
+<p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
 A style-neutral quality baseline for Codex UI work. It covers consistency,
 responsive layouts, interaction states, accessibility, forms, and data displays,
