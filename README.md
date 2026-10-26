@@ -9,7 +9,7 @@ A small collection of personal skills.
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-long-horizon-start-to-end-setup` | <span role="img" title="4 out of 5 stars" aria-label="4 out of 5 stars">⭐⭐⭐⭐✩</span> | Works really well on Codex for overnight runs; the parallel-agent workflow may need refinement. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-academic-research-suite` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Haven't used it much yet. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `schedule-assistant` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | Uses the Google Calendar plugin; new replacement, not evaluated yet. |
-| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Updated with restart-necessity checks and a one-restart guard; this version has not been reevaluated. |
+| <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-self-restart` | <span role="img" title="3 out of 5 stars" aria-label="3 out of 5 stars">⭐⭐⭐✩✩</span> | Verifies a restart is necessary and limits each workflow to one restart. |
 | <img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"> | `c-ui-fundamentals` | <span title="Not rated yet" aria-label="Not rated yet">N/A</span> | New; not evaluated yet. |
 
 ## Table of contents
