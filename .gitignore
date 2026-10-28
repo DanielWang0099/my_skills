@@ -6,4 +6,4 @@ __pycache__/
 .venv/
 venv/
 /AGENTS.md
-/schedule-assistant/preferences.md
+/c-schedule-assistant/preferences.md

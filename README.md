@@ -8,7 +8,7 @@ A small collection of custom agent skills.
 | Ready to use | `c-explain-diff-html` |
 | Ready to use | `c-long-horizon-start-to-end-setup` |
 | Ready to use | `c-academic-research-suite` |
-| Ready to use | `schedule-assistant` |
+| Ready to use | `c-schedule-assistant` |
 | Ready to use | `c-self-restart` |
 | Ready to use | `c-ui-fundamentals` |
 
@@ -18,7 +18,7 @@ A small collection of custom agent skills.
 - [c-explain-diff-html — Ready to use](#c-explain-diff-html)
 - [c-long-horizon-start-to-end-setup — Ready to use](#c-long-horizon-start-to-end-setup)
 - [c-academic-research-suite — Ready to use](#c-academic-research-suite)
-- [schedule-assistant — Ready to use](#schedule-assistant)
+- [c-schedule-assistant — Ready to use](#c-schedule-assistant)
 - [c-self-restart — Ready to use](#c-self-restart)
 - [c-ui-fundamentals — Ready to use](#c-ui-fundamentals)
 
@@ -32,7 +32,7 @@ Please install every top-level skill from
 https://github.com/DanielWang0099/my_skills into the agent's supported skills
 directory. Clone that repository and discover each of these skill directories:
 c-academic-research-suite, c-misunderstandings-correction, c-explain-diff-html,
-c-long-horizon-start-to-end-setup, schedule-assistant, c-self-restart,
+c-long-horizon-start-to-end-setup, c-schedule-assistant, c-self-restart,
 and c-ui-fundamentals.
 Preserve each directory's complete folder structure and supporting files.
 
@@ -124,7 +124,7 @@ research, writing, review, and pipeline workflows available. Do not enable
 optional external services or the full-runtime adapter during installation.
 ```
 
-## schedule-assistant
+## c-schedule-assistant
 
 <p><img src="https://img.shields.io/badge/Ready%20to%20use-2ea44f?style=for-the-badge" alt="Ready to use"></p>
 
@@ -138,8 +138,8 @@ custom OAuth helper.
 **LLM installation prompt**
 
 ```text
-Install the complete schedule-assistant skill directory from
-https://github.com/DanielWang0099/my_skills/tree/main/schedule-assistant,
+Install the complete c-schedule-assistant skill directory from
+https://github.com/DanielWang0099/my_skills/tree/main/c-schedule-assistant,
 preserving SKILL.md. Do not copy personal `preferences.md` files; use the skill's
 defaults when no local preferences file exists. Use the connected Google Calendar
 plugin for calendar reads and writes; no custom OAuth setup is required.

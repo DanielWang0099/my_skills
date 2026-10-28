@@ -1,5 +1,5 @@
 ---
-name: schedule-assistant
+name: c-schedule-assistant
 description: Teaches how to be a good scheduling assistant on top of the Google Calendar plugin - checking the real calendar before touching it, thinking through the practical logic of a schedule (meals, travel, buffers, time zones, working hours), following the user's lead while offering better options, turning conflicts into clear choices, and learning the user's preferences from feedback. Use whenever the user wants to add, create, schedule, move, update, delete, search, or review calendar events; asks when something should happen or whether they are free; shares an invitation, screenshot, email, or link that contains dates, sessions, or deadlines; wants help planning a day or week; or gives feedback on how you handled their calendar (which should update preferences.md).
 ---
 
