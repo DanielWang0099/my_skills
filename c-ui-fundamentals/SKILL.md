@@ -112,11 +112,13 @@ Every interactive element needs distinct, visible states for default, hover (poi
 
 For every data-driven view, design and build:
 
-- **Loading**: a skeleton or spinner sized so the page does not jump when content arrives. No blank flash.
+- **Loading**: a skeleton or spinner sized so the page does not jump when content arrives. No blank flash. Give immediate feedback for user-initiated actions. For data loading, avoid flashing a loading state for work that finishes quickly; if waiting becomes noticeable, show a clear indicator. Reserve appropriate space so content does not jump when it arrives.
 - **Empty**: say what belongs here and offer the one action that fills it.
 - **Error**: say what went wrong and what to do next, offer retry, and keep the user's input.
 - **Edge content**: zero, one, and many items; very long and very short text; missing images (fall back to initials or a neutral placeholder); large numbers.
 - **Success**: confirm actions that have side effects.
+
+Keep transitions between loading, content, empty, and error states stable. Where appropriate, retain valid existing content during refresh or navigation, or reserve space for the incoming content. Do not show an empty or error state until it is confirmed. Coordinate related loading states when independent updates would cause repeated shifts. Choose techniques that fit the interaction; do not delay results just to make a loader visible, and do not present stale content as current without indicating that it is being updated.
 
 Use realistic sample content: plausible names, varied lengths, believable numbers and dates. Avoid lorem ipsum, "Item 1", ten identical rows, and a button labeled "Button". Realistic content also exposes layout bugs that tidy placeholder text hides.
 
@@ -175,6 +177,7 @@ Scan for these before delivering:
 - One-off pixel and hex values; `z-index: 9999`.
 - Layout that breaks with real content: overflowing text, huge empty gaps, unbounded line lengths.
 - Layout shift on load; images popping in and pushing content.
+- Loading indicators that flash briefly, components that repeatedly shift as data arrives, or empty and error states that appear before the result is known.
 - Horizontal scroll on a phone; tiny tap targets; hover-only controls.
 - Blank screen while loading, an endless spinner, a raw error string, an empty table showing only headers.
 - Placeholder content: lorem ipsum, "Item 1", "Click here", identical sample rows.
