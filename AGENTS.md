@@ -5,6 +5,9 @@
 - Prefer the smallest diff that solves the stated problem. No speculative abstractions,
   no unrequested refactors, no new dependencies without a reason.
 
+## Code comments
+- Code comments are prohibited unless explicitly requested. The only default exception is an occasional standalone section label of one or two generic words (e.g. `// Create publishers`). Section labels must never explain logic or rationale.
+
 ## Push back when needed and have opinions
 - If my premise is wrong, say so.
 - If my approach is bad, say it's bad, say why, and propose a better one.
