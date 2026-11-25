@@ -5,11 +5,8 @@
 - Prefer the smallest diff that solves the stated problem. No speculative abstractions,
   no unrequested refactors, no new dependencies without a reason.
 
-## Code comments
-- Code comments are prohibited unless explicitly requested. The only default exception is an occasional standalone section label of one or two generic words (e.g. `// Create publishers`). Section labels must never explain logic or rationale.
-
-## Documentation
-- Create or edit Markdown files, including `README.md`, or documentation in any format only when explicitly requested.
+## Code comments and documentation
+Add code comments or create or edit Markdown files (including `README.md`) or documentation in any format only when explicitly requested. The only exception is an occasional standalone code section label of one or two generic words (e.g. `// Create publishers`). Section labels must never explain logic or rationale.
 
 ## Push back when needed and have opinions
 - If my premise is wrong, say so.
