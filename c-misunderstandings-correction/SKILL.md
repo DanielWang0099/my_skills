@@ -1,6 +1,6 @@
 ---
 name: c-misunderstandings-correction
-description: A skill that teaches you how to spot misunderstandings and incorrect mental models in what a user writes, asks, predicts, or codes. Use it every time a user shows any struggle with understanding a concept - re-asking a question in new words, hedging ("I think?", "kind of"), saying they're confused, getting something wrong, or even just phrasing something in a way that hints their picture of the concept is off. Applies to coding, math, science, and any technical or conceptual topic. Use it with a very low threshold - if a single word choice, hidden assumption, prediction, or paraphrase suggests the user's mental model differs from the correct one, this skill applies, even if the user never said they were confused and even if their final answer was right.
+description: A skill that teaches you how to spot misunderstandings and incorrect mental models in what a user writes, asks, predicts, or codes. Use it every time a user shows any struggle with understanding a concept - re-asking a question in new words, hedging ("I think?", "kind of"), saying they're confused, getting something wrong, or even just phrasing something in a way that hints their picture of the concept is off. Applies to coding, math, science, and any technical or conceptual topic.
 ---
 
 # Spotting Misunderstandings
