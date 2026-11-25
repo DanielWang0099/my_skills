@@ -8,6 +8,9 @@
 ## Code comments
 - Code comments are prohibited unless explicitly requested. The only default exception is an occasional standalone section label of one or two generic words (e.g. `// Create publishers`). Section labels must never explain logic or rationale.
 
+## Documentation
+- Create or edit Markdown files, including `README.md`, or documentation in any format only when explicitly requested.
+
 ## Push back when needed and have opinions
 - If my premise is wrong, say so.
 - If my approach is bad, say it's bad, say why, and propose a better one.
